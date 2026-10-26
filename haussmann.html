@@ -24,15 +24,26 @@
 
   <!-- ===================== AVANT ===================== -->
   <h2 id="avant">1. Avant la vidéo</h2>
-  <div class="box">
-    <h3>Faites des hypothèses</h3>
-    <p>Le titre de la vidéo est&nbsp;: <b>«&nbsp;Au XIX<sup>e</sup> siècle, le baron Haussmann transforme le visage de Paris&nbsp;»</b>.</p>
-    <ul>
-      <li>Selon vous, à quoi ressemblait Paris avant le XIX<sup>e</sup> siècle&nbsp;? Les rues étaient-elles larges ou étroites&nbsp;?</li>
-      <li>Pourquoi une ville décide-t-elle de transformer ses rues&nbsp;?</li>
-    </ul>
-    <p class="notice">Notez vos idées sur une feuille. Vous les vérifierez après la vidéo.</p>
+  <h3>Voici Paris</h3>
+  <p class="notice">Observez les trois images. Touchez une image pour l'agrandir.</p>
+  <div class="galerie">
+    <figure><a href="images/paris-a.jpg"><img src="images/paris-a.jpg" alt="Image A : gravure en noir et blanc. Dans une rue, des hommes vident des caisses de déchets dans une grande charrette ; au premier plan, une femme penchée fouille le sol." loading="lazy"></a><figcaption>A</figcaption></figure>
+    <figure><a href="images/paris-b.jpg"><img src="images/paris-b.jpg" alt="Image B : peinture en couleurs. Sur une large avenue bordée d'immeubles, des femmes élégantes achètent des fleurs à une marchande ; des calèches passent." loading="lazy"></a><figcaption>B</figcaption></figure>
+    <figure><a href="images/paris-c.jpg"><img src="images/paris-c.jpg" alt="Image C : photographie en noir et blanc d'une rue très étroite et sombre, pavée, entre de hautes maisons anciennes." loading="lazy"></a><figcaption>C</figcaption></figure>
   </div>
+  <div class="box">
+    <h3>Parlons-en</h3>
+    <ol>
+      <li><b>L'époque</b>&nbsp;: à votre avis, de quand datent ces images&nbsp;? Quels détails vous aident à répondre (les vêtements, les transports, l'éclairage…)&nbsp;?</li>
+      <li><b>La description</b>&nbsp;: qu'est-ce qu'on voit dans chaque image&nbsp;? Le lieu, les personnes, ce qu'elles font, l'ambiance.</li>
+      <li><b>La carte postale</b>&nbsp;: est-ce le Paris de carte postale&nbsp;? Quelle image pourrait être une carte postale&nbsp;? Laquelle montre une réalité qu'on ne met pas sur les cartes postales&nbsp;?</li>
+      <li><b>Le lien avec la vidéo</b>&nbsp;: la vidéo s'appelle «&nbsp;Au XIX<sup>e</sup> siècle, le baron Haussmann transforme le visage de Paris&nbsp;». Selon vous, quelle image montre le Paris d'avant&nbsp;? Le Paris d'après&nbsp;? Un problème à résoudre&nbsp;?</li>
+    </ol>
+    <p class="phrases">On y voit… · Au premier plan / À l'arrière-plan, il y a… · Je pense que cette image date de… parce que… · Ça ressemble à… · Ce n'est pas le Paris de carte postale, parce que…</p>
+    <p class="notice"><b>Mots utiles</b>&nbsp;: une rue pavée, étroite, sombre · un boulevard large, lumineux · un trottoir · un réverbère · une calèche · une charrette · les ordures, les déchets · un chiffonnier, une chiffonnière (une personne qui récupère des objets dans les déchets) · une marchande de fleurs</p>
+    <p class="notice">Gardez vos réponses (à l'oral ou sur une feuille) : vous les vérifierez après la vidéo.</p>
+  </div>
+  <div id="ex-images"></div>
   <div id="ex-vocab"></div>
 
   <!-- ===================== ÉCOUTER ===================== -->
@@ -75,7 +86,7 @@
   <!-- ===================== APRÈS ===================== -->
   <h2 id="apres">3. Après la vidéo</h2>
   <div class="box">
-    <p><b>Vérifiez vos hypothèses</b> du début&nbsp;: qu'est-ce qui était juste&nbsp;? Qu'est-ce qui vous a surpris&nbsp;?</p>
+    <p><b>Revenez aux trois images</b>&nbsp;: laquelle montre le Paris d'avant Haussmann&nbsp;? Le Paris d'après&nbsp;? Le problème que les travaux voulaient résoudre&nbsp;? Vos réponses du début étaient-elles justes&nbsp;? Qu'est-ce qui vous a surpris&nbsp;?</p>
   </div>
 
   <h3>Production orale</h3>
@@ -141,7 +152,7 @@
       <p>Au début du XIX<sup>e</sup> siècle, la largeur moyenne des rues est de 8 mètres 50. Si on regarde les percées haussmanniennes, elles sont bien sûr beaucoup plus larges. Généralement, elles ont une largeur d'au moins 20 mètres, mais peuvent aller jusqu'à 30 mètres, et même pour certaines jusqu'à 100 mètres de large, parce qu'elles ont des trottoirs, des contre-allées, etc. Donc le visage de Paris est complètement transformé.</p>
     </div>
   </details>
-  <p class="note-pied notice">Vidéo&nbsp;: Public Sénat. Transcription établie à partir des sous-titres de la vidéo. Utilisation pédagogique en classe.</p>
+  <p class="note-pied notice">Vidéo&nbsp;: Public Sénat. Images&nbsp;: une gravure, une peinture et une photographie du XIX<sup>e</sup> siècle. Transcription établie à partir des sous-titres de la vidéo. Utilisation pédagogique en classe.</p>
 </main>
 
 <script src="assets/exercices.js"></script>
@@ -165,9 +176,22 @@
   });
 })();
 
+/* ---------- Avant la vidéo : les images ---------- */
+Exos.qcm(document.getElementById("ex-images"), {
+  num: 1, color: "c-gris", titre: "Observez bien",
+  consigne: "Regardez encore les images A, B et C.",
+  items: [
+    { q: "Ces trois images datent…", options: ["du XVII<sup>e</sup> siècle", "du XIX<sup>e</sup> siècle", "des années 1950"], answer: 1, ok: "Les vêtements, les calèches, les réverbères à gaz, aucune voiture : nous sommes au XIX<sup>e</sup> siècle.", fb: { 0: "Regardez les vêtements et les calèches : c'est plus récent.", 2: "Il n'y a aucune automobile : c'est plus ancien." } },
+    { q: "Dans quelle image la rue est-elle étroite, sombre et sans trottoir ?", options: ["A", "B", "C"], answer: 2, ok: "Une ruelle du vieux Paris : peu de lumière, pas de trottoir, de hautes maisons serrées.", fb: { 1: "Dans l'image B, la rue est au contraire très large." } },
+    { q: "Quelle image montre une avenue large et lumineuse, avec des trottoirs ?", options: ["A", "B", "C"], answer: 1, ok: "Un boulevard élégant : c'est le Paris « de carte postale ».", fb: { 2: "Dans l'image C, la rue est étroite et sombre." } },
+    { q: "Dans l'image A, que fait la femme au premier plan ?", options: ["Elle cueille des fleurs.", "Elle cherche des objets dans les déchets.", "Elle lave la rue."], answer: 1, ok: "C'est une chiffonnière : elle récupère ce qui peut être revendu (tissus, papier, métal…).", fb: { 0: "Regardez bien : il n'y a pas de fleurs, mais des caisses et une charrette de déchets." } },
+    { q: "Quel problème de la ville l'image A montre-t-elle ?", options: ["la circulation", "la propreté et les déchets", "le bruit"], answer: 1, ok: "Les déchets dans la rue : un vrai problème d'hygiène… et c'est le thème de la vidéo.", fb: { 0: "Il n'y a pas d'embouteillage : regardez la charrette et les caisses." } }
+  ]
+});
+
 /* ---------- Avant la vidéo : vocabulaire ---------- */
 Exos.qcm(document.getElementById("ex-vocab"), {
-  num: 1, color: "c-violet", titre: "Les mots de la vidéo",
+  num: 2, color: "c-violet", titre: "Les mots de la vidéo",
   consigne: "Choisissez la bonne définition. Ces mots vont vous aider à comprendre.",
   melanger: true,
   items: [
@@ -184,7 +208,7 @@ Exos.qcm(document.getElementById("ex-vocab"), {
 
 /* ---------- Écoute 1 ---------- */
 Exos.qcm(document.getElementById("ex-global"), {
-  num: 2, color: "c-bleu", titre: "De quoi parle la vidéo ?",
+  num: 3, color: "c-bleu", titre: "De quoi parle la vidéo ?",
   consigne: "Après une écoute complète, sans sous-titres.",
   items: [
     { q: "C'est…", options: ["un reportage historique avec une historienne", "une publicité pour visiter Paris", "un débat politique entre deux sénateurs"], answer: 0, ok: "Un narrateur raconte ; une historienne explique.", fb: { 1: "Il n'y a pas de message touristique : on parle d'histoire.", 2: "Il n'y a pas de débat : une seule spécialiste est interviewée." } },
@@ -194,7 +218,7 @@ Exos.qcm(document.getElementById("ex-global"), {
   ]
 });
 Exos.ordre(document.getElementById("ex-plan"), {
-  num: 3, color: "c-vert", titre: "Le plan du reportage",
+  num: 4, color: "c-vert", titre: "Le plan du reportage",
   items: [
     { texte: "Dans quel ordre le reportage présente-t-il ces idées ?",
       etapes: ["La révolution industrielle et l'exode rural", "L'épidémie de choléra", "La statistique médicale et les quartiers insalubres", "Haussmann devient préfet de Paris", "Les nouvelles avenues, plus larges"],
@@ -205,7 +229,7 @@ Exos.ordre(document.getElementById("ex-plan"), {
 
 /* ---------- Écoute 2 ---------- */
 Exos.qcm(document.getElementById("ex-vf"), {
-  num: 4, color: "c-rouge", titre: "Vrai ou faux ?",
+  num: 5, color: "c-rouge", titre: "Vrai ou faux ?",
   items: [
     { q: "Au début du XIX<sup>e</sup> siècle, on mourait plus à la campagne qu'en ville.", options: ["Vrai", "Faux"], answer: 1, ok: "Faux : « on meurt plus en ville qu'à la campagne » (la surmortalité urbaine).", fb: { 0: "Écoutez bien : c'est le contraire." } },
     { q: "Les médecins, les architectes et les politiques cherchent des solutions.", options: ["Vrai", "Faux"], answer: 0, ok: "Ils « tentent de résoudre par tous les moyens » la situation." },
@@ -216,7 +240,7 @@ Exos.qcm(document.getElementById("ex-vf"), {
   ]
 });
 Exos.saisie(document.getElementById("ex-chiffres"), {
-  num: 5, color: "c-bleu", titre: "Les chiffres et les dates",
+  num: 6, color: "c-bleu", titre: "Les chiffres et les dates",
   consigne: "Écrivez en chiffres.",
   items: [
     { text: "L'épidémie de choléra a lieu en ___.", chiffre: true, answers: ["1832"], fb: { "1830": "Presque ! Réécoutez : « En mille huit cent trente-deux »." }, ok: "En 1832." },
@@ -228,7 +252,7 @@ Exos.saisie(document.getElementById("ex-chiffres"), {
   ]
 });
 Exos.qcm(document.getElementById("ex-detail"), {
-  num: 6, color: "c-violet", titre: "Les détails",
+  num: 7, color: "c-violet", titre: "Les détails",
   items: [
     { q: "Comment le narrateur décrit-il Haussmann ?", options: ["dévoré d'ambition et bourreau de travail", "timide et prudent", "riche et paresseux"], answer: 0, ok: "Un haut fonctionnaire très ambitieux qui travaille énormément." },
     { q: "Quel courant d'idées porte Haussmann ?", options: ["le courant hygiéniste", "le courant romantique", "le courant écologiste"], answer: 0, ok: "L'hygiénisme : améliorer la santé par la propreté, l'air et la lumière.", fb: { 2: "Le mot « écologiste » n'existe pas encore au XIX<sup>e</sup> siècle dans ce sens." } },
@@ -240,7 +264,7 @@ Exos.qcm(document.getElementById("ex-detail"), {
 
 /* ---------- Écoute 3 : du présent de narration au passé ---------- */
 Exos.conj(document.getElementById("ex-passe"), {
-  num: 7, color: "c-vert", titre: "Racontez au passé",
+  num: 8, color: "c-vert", titre: "Racontez au passé",
   consigne: "Mettez le verbe au passé composé (le repère) ou au plus-que-parfait (avant le repère).",
   items: [
     { text: "La révolution industrielle ___ (bouleverser) les modes de vie.", verb: "bouleverser", subj: "la révolution industrielle", p: 2, aux: "avoir", pp: "bouleversé", tense: "pc", ctx: "C'est un fait du récit, pas une action antérieure." },
