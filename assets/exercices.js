@@ -78,7 +78,7 @@
         fb.setAttribute("aria-live", "polite");
         var tries = 0, solved = false;
         var order = it.options.map(function (_, i) { return i; });
-        if (cfg.melanger) order = shuffle(order);
+        if (cfg.melanger && !it.fixe) order = shuffle(order);
         order.forEach(function (oi) {
           var b = el("button", "opt", it.options[oi]);
           b.type = "button";
