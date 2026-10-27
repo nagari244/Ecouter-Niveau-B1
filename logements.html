@@ -42,6 +42,7 @@
   <div class="video-wrap">
     <video id="video" controls playsinline preload="metadata" src="logements-paris.mp4"></video>
     <div class="cache-st" id="cache">Sous-titres masqués&nbsp;: écoutez&nbsp;!</div>
+    <div class="cache-st" id="cache-titre" style="top:54%;height:11.6%" aria-hidden="true"></div>
   </div>
   <div class="btn-row" style="justify-content:center">
     <button type="button" class="btn" id="bascule" aria-pressed="true">Afficher les sous-titres</button>
@@ -81,9 +82,15 @@
 /* ---------- Vidéo : sous-titres masqués, fichier de secours ---------- */
 (function () {
   var v = document.getElementById("video"), cache = document.getElementById("cache"), b = document.getElementById("bascule");
+  /* Le titre du début (0 à 3 s) est écrit plus haut que les sous-titres : un second bandeau le couvre. */
+  var titre = document.getElementById("cache-titre");
+  function majTitre() { titre.hidden = cache.hidden || v.currentTime >= 3.1; }
+  ["timeupdate", "seeked", "seeking", "play", "loadedmetadata"].forEach(function (ev) { v.addEventListener(ev, majTitre); });
+  if (v.requestVideoFrameCallback) { (function boucle() { v.requestVideoFrameCallback(function () { majTitre(); boucle(); }); })(); }
   b.addEventListener("click", function () {
     var masque = !cache.hidden;
     cache.hidden = masque;
+    majTitre();
     b.setAttribute("aria-pressed", String(!masque));
     b.textContent = masque ? "Masquer les sous-titres" : "Afficher les sous-titres";
   });
