@@ -231,15 +231,14 @@ Exos.ordre(document.getElementById("ex-plan"), {
 
 /* ---------- Écoute 2 ---------- */
 Exos.qcm(document.getElementById("ex-vf"), {
-  num: 5, color: "c-rouge", titre: "Vrai, faux ou on ne sait pas ?",
-  consigne: "« On ne sait pas » : le reportage ne donne pas l'information.",
+  num: 5, color: "c-rouge", titre: "Vrai ou faux ?",
   items: [
-    { q: "Selon le reportage, la ville devient malsaine parce que la population augmente trop vite.", options: ["Vrai", "Faux", "On ne sait pas"], answer: 0, ok: "Vrai : exode rural, « la concentration urbaine explose », « Paris est surchargé ».", fb: { 1: "Réécoutez le début : pourquoi Paris est-il « surchargé » ?", 2: "Le reportage le dit au début : écoutez « l'exode rural » et « la concentration urbaine »." } },
-    { q: "Les médecins sont les seuls à chercher des solutions.", options: ["Vrai", "Faux", "On ne sait pas"], answer: 1, ok: "Faux : « les médecins, les architectes et les politiques » cherchent des solutions.", fb: { 0: "Écoutez la liste : les médecins ne sont pas seuls.", 2: "Le reportage cite trois groupes de personnes : réécoutez." } },
-    { q: "La statistique médicale est une méthode à la mode dans la première moitié du XIX<sup>e</sup> siècle.", options: ["Vrai", "Faux", "On ne sait pas"], answer: 0, ok: "Vrai : une démarche « très en vogue » (= à la mode) à cette époque.", fb: { 1: "L'historienne dit qu'elle est « très en vogue » : que signifie cette expression ?", 2: "L'historienne le dit : écoutez l'expression « très en vogue »." } },
-    { q: "Haussmann mène les travaux seul, sans l'accord de l'empereur.", options: ["Vrai", "Faux", "On ne sait pas"], answer: 1, ok: "Faux : il agit « sous les ordres de Napoléon III ».", fb: { 0: "Écoutez la phrase qui commence par « Sous les ordres de… ».", 2: "Le reportage le dit : « sous les ordres de Napoléon III »." } },
-    { q: "Toutes les percées haussmanniennes mesurent au moins 30 mètres de large.", options: ["Vrai", "Faux", "On ne sait pas"], answer: 1, ok: "Faux : généralement au moins 20 mètres ; elles peuvent aller jusqu'à 30, et certaines jusqu'à 100.", fb: { 0: "Attention aux chiffres : quelle est la largeur minimale ?", 2: "L'historienne donne les chiffres : réécoutez la fin." } },
-    { q: "Les habitants des vieux quartiers sont relogés dans les nouveaux immeubles.", options: ["Vrai", "Faux", "On ne sait pas"], answer: 2, ok: "On ne sait pas : le reportage ne dit rien sur le relogement des habitants.", fb: { 0: "Le reportage parle-t-il des habitants des quartiers démolis ? Réécoutez.", 1: "Le reportage ne dit pas non plus le contraire : il ne parle pas du tout du relogement." } }
+    { q: "Selon le reportage, la ville devient malsaine parce que la population augmente trop vite.", options: ["Vrai", "Faux"], answer: 0, ok: "Vrai : exode rural, « la concentration urbaine explose », « Paris est surchargé ».", fb: { 1: "Réécoutez le début : pourquoi Paris est-il « surchargé » ?" } },
+    { q: "Les médecins sont les seuls à chercher des solutions.", options: ["Vrai", "Faux"], answer: 1, ok: "Faux : « les médecins, les architectes et les politiques » cherchent des solutions.", fb: { 0: "Écoutez la liste : les médecins ne sont pas seuls." } },
+    { q: "La statistique médicale est une méthode à la mode dans la première moitié du XIX<sup>e</sup> siècle.", options: ["Vrai", "Faux"], answer: 0, ok: "Vrai : une démarche « très en vogue » (= à la mode) à cette époque.", fb: { 1: "L'historienne dit qu'elle est « très en vogue » : que signifie cette expression ?" } },
+    { q: "Haussmann mène les travaux seul, sans l'accord de l'empereur.", options: ["Vrai", "Faux"], answer: 1, ok: "Faux : il agit « sous les ordres de Napoléon III ».", fb: { 0: "Écoutez la phrase qui commence par « Sous les ordres de… »." } },
+    { q: "Toutes les percées haussmanniennes mesurent au moins 30 mètres de large.", options: ["Vrai", "Faux"], answer: 1, ok: "Faux : généralement au moins 20 mètres ; elles peuvent aller jusqu'à 30, et certaines jusqu'à 100.", fb: { 0: "Attention aux chiffres : quelle est la largeur minimale ?" } },
+    { q: "Les nouvelles percées sont en général plus de deux fois plus larges que les rues du début du siècle.", options: ["Vrai", "Faux"], answer: 0, ok: "Vrai : au moins 20 mètres, contre 8 mètres 50 en moyenne avant.", fb: { 1: "Comparez les deux chiffres de l'historienne : la largeur moyenne avant, et la largeur minimale des percées." } }
   ]
 });
 Exos.saisie(document.getElementById("ex-chiffres"), {
