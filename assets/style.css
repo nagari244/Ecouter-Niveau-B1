@@ -119,6 +119,9 @@ button.opt:hover:not(:disabled), .btn:hover:not(:disabled) { border-color: var(-
 button.opt.is-ok { border-color: var(--vert-txt); color: var(--vert-txt); font-weight: 600; }
 button.opt.is-ko { border-color: var(--rouge-txt); color: var(--rouge-txt); text-decoration: line-through; }
 button.opt:disabled { cursor: default; }
+button.opt .lettre { font-weight: 700; color: var(--bleu-txt); margin-right: 2px; }
+button.opt.is-ok .lettre { color: inherit; }
+button.opt.is-ko .lettre { color: inherit; }
 .btn.primary { border-color: var(--bleu-txt); color: var(--bleu-txt); font-weight: 600; }
 .btn.small { min-height: 38px; padding: 4px 12px; font-size: .92rem; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }

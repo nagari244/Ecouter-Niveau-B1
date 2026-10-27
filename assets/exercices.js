@@ -79,8 +79,9 @@
         var tries = 0, solved = false;
         var order = it.options.map(function (_, i) { return i; });
         if (cfg.melanger && !it.fixe) order = shuffle(order);
-        order.forEach(function (oi) {
-          var b = el("button", "opt", it.options[oi]);
+        order.forEach(function (oi, pos) {
+          var b = el("button", "opt", '<span class="lettre" aria-hidden="true">' + "abcdefgh".charAt(pos) + ')</span> ' + it.options[oi]);
+          b.setAttribute("aria-label", "abcdefgh".charAt(pos) + ") " + it.options[oi].replace(/<[^>]+>/g, ""));
           b.type = "button";
           b.addEventListener("click", function () {
             if (solved) return;
